@@ -27,27 +27,25 @@ const Hero = () => {
       <section id="home">
         <div className="bg-[#006242] flex flex-col md:flex-row justify-center items-center my-5 mr-5 ml-5 md:h-screen">
           {/* Image */}
-          <div className="w-full md:w-1/2 h-90 md:h-full">
+          <div className="md:w-1/2 md:h-full">
             <img
               src={manImage}
               alt="Landscape contractor at work in San Diego"
-              className="w-full h-full object-cover"
+              className="h-full object-cover"
             />
           </div>
 
           {/* Content */}
-          <div className="w-full md:w-1/2 justify-center items-center flex flex-col text-center px-6 md:px-9 py-8">
-            <div className="text-white text-base md:text-lg tracking-normal">
-              <h1 className="font-extrabold mb-8">
-                <span className="text-center text-3xl md:text-5xl leading-tight">
-                  SANDYLAND LANDSCAPE CONTRACTOR COMPANY
-                </span>
+          <div className="md:w-1/2 text-[#FFFFFF] justify-center flex-col py-8 px-2 text-center text-content lg:px-10">
+            <div className="tracking-normal">
+              <h1 className="font-bold text-2xl mb-6 lg:text-3xl">
+                SANDYLAND LANDSCAPE CONTRACTOR COMPANY
               </h1>
-              <div className="text-white flex flex-col px-4 md:px-10">
-                <div className="mb-4 text-lg md:text-xl">
+              <div className="flex-col px-4">
+                <div className="mb-4 text-xl">
                   Your Dream Outdoor Space, Designed to Impress!
                 </div>
-                <div className="text-justify mb-4 flex flex-col text-base md:text-lg">
+                <div className="text-justify font-normal text-base lg:text-xl md:py-3">
                   <p>
                     Luxury landscaping isn’t just about aesthetics—it’s about
                     creating an experience. At Sandyland Landscape Contractor
@@ -55,7 +53,7 @@ const Hero = () => {
                     your lifestyle and property value.
                   </p>
                   <div>
-                    <div className="mt-4">
+                    <div className="mt-4 text-base lg:text-xl md:py-1">
                       <strong>Let’s make your vision a reality.</strong> Fill
                       out our form today and let’s create a space that reflects
                       your success.
@@ -66,7 +64,7 @@ const Hero = () => {
             </div>
             <button
               onClick={scrollToSection4}
-              className="mt-6 px-6 py-3 inset-ring-2 text-white font-semibold rounded-lg shadow-lg hover:bg-emerald-900 transition w-2/3 md:w-auto"
+              className="mt-6 px-6 py-3 inset-ring-2 text-sm lg:text-xl rounded-lg shadow-lg hover:bg-emerald-800 transition w-2/3 md:w-auto"
             >
               Start Your Transformation
             </button>
@@ -83,22 +81,22 @@ const Hero = () => {
 
       {/* Section Services */}
       <section id="services">
-        <div className="min-h-screen flex flex-col md:flex-row items-center my-5 bg-[#f0eee8] rounded-tr-[8vw] rounded-l-lg px-4 md:px-8">
-          <div className="w-full md:w-[70%] px-4 md:px-8 pt-8 pb-8">
+        <div className="flex flex-col md:flex-row items-center bg-[#f0eee8] rounded-tr-[8vw] rounded-l-lg px-4 py-5 md:px-5">
+          <div className="md:w-[75%] px-4 md:px-2 pt-10 pb-10">
             <Carousel />
           </div>
-          <div class="w-full md:w-1/3 px-4 py-8 md:px-8">
-            <div className="text-center font-semibold tracking-tight">
-              <h3 className="text-3xl md:text-4xl text-[#006242] mb-3">
+          <div class="row">
+            <div className="text-center">
+              <h3 className="text-3xl md:py-8 md:text-2xl lg:text-3xl text-[#00452E] font-semibold pb-5">
                 Complete solutions for your outdoor space
               </h3>
             </div>
-            <div className="pt-8">
-              <ul className="space-y-4 w-full">
+            <div className="pb-5">
+              <ul className="space-y-1">
                 {services.map((service, index) => (
                   <li key={index} className="flex items-start gap-3">
-                    <div className="text-[#006242] mt-1">
-                      <i className="bi bi-check-circle-fill text-xl"></i>
+                    <div className="text-[#00452E] mt-1 px-8 sm:px-5">
+                      <i className="bi bi-check-circle-fill text-lg"></i>
                     </div>
                     <p className="text-lg font-medium">{service}</p>
                   </li>
@@ -113,7 +111,7 @@ const Hero = () => {
       <section id="contact">
         <div className="flex flex-col md:flex-row mt-8 mb-8 mx-5 lg:px-8 gap-5">
           <div class="w-full md:w-1/2 text-center px-6 md:px-10 pb-8 pt-8">
-            <h3 class="text-3xl md:text-5xl font-semibold tracking-tight text-[#006242]">
+            <h3 class="text-3xl md:text-4xl font-semibold tracking-tight text-[#00452E]">
               Contact sales
             </h3>
             <p class="mt-4 text-left text-lg text-black pb-6">

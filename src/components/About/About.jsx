@@ -32,22 +32,22 @@ const About = () => {
 
   const features = [
     {
-      icon: <Calendar className="h-8 w-8 text-emerald-900" />,
+      icon: <Calendar className="h-8 w-8 text-[#00452E]" />,
       title: "10+ Years of Experience",
       description: "Over a decade transforming outdoor spaces in California.",
     },
     {
-      icon: <Award className="h-8 w-8 text-emerald-900" />,
+      icon: <Award className="h-8 w-8 text-[#00452E]" />,
       title: "Certified & Licensed",
       description: "We hold all necessary licenses and certifications.",
     },
     {
-      icon: <Users className="h-8 w-8 text-emerald-900" />,
+      icon: <Users className="h-8 w-8 text-[#00452E]" />,
       title: "Professional Team",
       description: "Skilled personnel with extensive landscaping experience.",
     },
     {
-      icon: <CheckCircle className="h-8 w-8 text-emerald-900" />,
+      icon: <CheckCircle className="h-8 w-8 text-[#00452E]" />,
       title: "Custom Designs",
       description: "We create unique designs tailored to your needs and style.",
     },
@@ -65,7 +65,7 @@ const About = () => {
               About Us
             </span>
 
-            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-gray-900">
+            <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#00452E]">
               Landscaping Experts Transforming Outdoor Spaces
             </h2>
 
