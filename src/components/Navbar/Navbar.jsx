@@ -5,7 +5,8 @@ const navbarlinks = [
   { id: 1, title: "Home", link: "#home" },
   { id: 2, title: "About Us", link: "#about" },
   { id: 3, title: "Services", link: "#services" },
-  { id: 4, title: "Contact", link: "#contact" },
+  { id: 4, title: "Testimonials", link: "#testimonials" },
+  { id: 5, title: "Contact", link: "#contact" },
 ];
 
 const Navbar = () => {
@@ -55,7 +56,7 @@ const Navbar = () => {
             {navbarlinks.map((link) => (
               <li key={link.id}>
                 <a
-                  className="sm:text-lg text-sm hover:scale-110 transform-all inline-block duration-300"
+                  className="text-base md:text-lg hover:scale-110 transform-all inline-block duration-300"
                   href={link.link}
                 >
                   {link.title}

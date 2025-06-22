@@ -36,16 +36,16 @@ const Hero = () => {
           </div>
 
           {/* Content */}
-          <div className="md:w-1/2 text-[#FFFFFF] justify-center flex-col py-8 px-2 text-center text-content lg:px-10">
+          <div className="md:w-1/2 text-[#FFFFFF] justify-center flex-col py-8 px-4 md:py-5 md:px-5 text-center text-content lg:py-8 lg:px-8">
             <div className="tracking-normal">
-              <h1 className="font-bold text-2xl mb-6 lg:text-3xl">
+              <h1 className="font-bold mb-3 md:py-3 text-xl lg:text-3xl">
                 SANDYLAND LANDSCAPE CONTRACTOR COMPANY
               </h1>
-              <div className="flex-col px-4">
-                <div className="mb-4 text-xl">
+              <div className="flex-col">
+                <div className="mb-3 text-lg lg:text-lg">
                   Your Dream Outdoor Space, Designed to Impress!
                 </div>
-                <div className="text-justify font-normal text-base lg:text-xl md:py-3">
+                <div className="text-justify font-normal text-base lg:text-lg">
                   <p>
                     Luxury landscaping isn’t just about aesthetics—it’s about
                     creating an experience. At Sandyland Landscape Contractor
@@ -53,7 +53,7 @@ const Hero = () => {
                     your lifestyle and property value.
                   </p>
                   <div>
-                    <div className="mt-4 text-base lg:text-xl md:py-1">
+                    <div className="mt-3 mb-3 text-base lg:text-lg lg:py-2 xl:mb-10">
                       <strong>Let’s make your vision a reality.</strong> Fill
                       out our form today and let’s create a space that reflects
                       your success.
@@ -64,7 +64,7 @@ const Hero = () => {
             </div>
             <button
               onClick={scrollToSection4}
-              className="mt-6 px-6 py-3 inset-ring-2 text-sm lg:text-xl rounded-lg shadow-lg hover:bg-emerald-800 transition w-2/3 md:w-auto"
+              className="mt-3 px-2 py-2 inset-ring-2 text-sm lg:text-lg rounded-lg shadow-lg hover:bg-emerald-800 transition w-2/3 md:w-auto"
             >
               Start Your Transformation
             </button>
@@ -74,7 +74,7 @@ const Hero = () => {
 
       {/* Section About */}
       <section id="about">
-        <div className="bg-white relative overflow-hidden pt-10 pb-15">
+        <div className="bg-white relative overflow-hidden pt-10 pb-15 p-5">
           <About />
         </div>
       </section>
@@ -106,15 +106,71 @@ const Hero = () => {
           </div>
         </div>
       </section>
+      {/* Section Testimonials */}
+      <section id="testimonials">
+        <div className="text-center items-center py-10 relative">
+          <h5 className="">Testimonials</h5>
+          <h1 className="text-4xl w-96 mx-auto leading-normal font-bold mb-10">
+            Read What Others Have to Say
+          </h1>
+          <div className="flex max-w-5xl mx-auto gap-8 flex-col md:flex">
+            <div className="bg-[#f0eee8] p-8 rounded-xl">
+              <img
+                class="w-24 h-24 mb-3 rounded-full mx-auto shadow-lg"
+                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1976&auto=format&fit=crop"
+                alt="Bonnie image"
+              />
+              <h5 class="mb-1 text-xl font-bold text-gray-900 dark:text-white">
+                Bonnie Green
+              </h5>
+              <p className="text-sm leading-7 my-3 font-light opacity-50">
+                Their knowledge of California native plants and efficient
+                irrigation systems transformed our garden into an oasis that
+                requires very little maintenance."
+              </p>
+            </div>
+            <div className="bg-[#f0eee8] p-8 rounded-xl">
+              <img
+                class="w-24 h-24 mb-3 rounded-full mx-auto shadow-lg"
+                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1976&auto=format&fit=crop"
+                alt="Bonnie image"
+              />
+              <h5 class="mb-1 text-xl font-bold text-gray-900 dark:text-white">
+                Bonnie Green
+              </h5>
+              <p className="text-sm leading-7 my-3 font-light opacity-50">
+                Their knowledge of California native plants and efficient
+                irrigation systems transformed our garden into an oasis that
+                requires very little maintenance."
+              </p>
+            </div>
+            <div className="bg-[#f0eee8] p-8 rounded-xl">
+              <img
+                class="w-24 h-24 mb-3 rounded-full mx-auto shadow-lg"
+                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1976&auto=format&fit=crop"
+                alt="Bonnie image"
+              />
+              <h5 class="mb-1 text-xl font-bold text-gray-900 dark:text-white">
+                Bonnie Green
+              </h5>
+              <p className="text-sm leading-7 my-3 font-light opacity-50">
+                Their knowledge of California native plants and efficient
+                irrigation systems transformed our garden into an oasis that
+                requires very little maintenance."
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Section Contacts */}
       <section id="contact">
-        <div className="flex flex-col md:flex-row mt-8 mb-8 mx-5 lg:px-8 gap-5">
-          <div class="w-full md:w-1/2 text-center px-6 md:px-10 pb-8 pt-8">
+        <div className="flex flex-col md:flex-row mt-8 mb-8 mx-5 lg:px-8 gap-5 md:px-5 sm:text-base lg:text-lg">
+          <div class="w-full md:w-1/2 text-center px-6 md:px-10 pb-8 pt-8 rounded-xl border border-gray-100">
             <h3 class="text-3xl md:text-4xl font-semibold tracking-tight text-[#00452E]">
               Contact sales
             </h3>
-            <p class="mt-4 text-left text-lg text-black pb-6">
+            <p class="mt-4 text-left text-lg text-black">
               Please tell us about your next project and how we can make it
               happen together. We offer free quotes for irrigation systems,
               hardscape, fencing, and more. Get started today!
@@ -232,7 +288,7 @@ const Hero = () => {
           </div>
 
           {/* contact information */}
-          <div class="w-full md:w-1/2 flex flex-col p-6 md:p-8 h-full">
+          <div class="md:w-1/2 flex flex-col h-full">
             <div class="bg-[#f0eee8] p-8 rounded-tl-[4vw] rounded-br-[4vw] rounded-l-lg shadow-md">
               <span className="block mb-6 d-inline-flex mt-3">
                 We’re here to help with all your urban landscape design needs.
