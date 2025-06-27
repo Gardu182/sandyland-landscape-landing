@@ -1,7 +1,7 @@
-import React from "react";
 import manImage from "../../assets/man-wearing-safety-vest.png";
 import Carousel from "../UI/Carousel";
 import About from "../About/About";
+import Services from "../UI/Services";
 
 const Hero = () => {
   const scrollToSection4 = () => {
@@ -81,39 +81,31 @@ const Hero = () => {
 
       {/* Section Services */}
       <section id="services">
-        <div className="flex flex-col md:flex-row items-center bg-[#f0eee8] rounded-tr-[8vw] rounded-l-lg px-4 py-5 md:px-5">
-          <div className="md:w-[75%] px-4 md:px-2 pt-10 pb-10">
-            <Carousel />
-          </div>
-          <div class="row">
-            <div className="text-center">
-              <h3 className="text-3xl md:py-8 md:text-2xl lg:text-3xl text-[#00452E] font-semibold pb-5">
-                Complete solutions for your outdoor space
-              </h3>
-            </div>
-            <div className="pb-5">
-              <ul className="space-y-1">
-                {services.map((service, index) => (
-                  <li key={index} className="flex items-start gap-3">
-                    <div className="text-[#00452E] mt-1 px-8 sm:px-5">
-                      <i className="bi bi-check-circle-fill text-lg"></i>
-                    </div>
-                    <p className="text-lg font-medium">{service}</p>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
+        <div className="py-20 bg-primary/5 relative bg-[#f0eee8]">
+          <Services />
         </div>
       </section>
+
+      {/* Section Gallery */}
+      <section id="gallery">
+        <div className="text-center items-center py-20 bg-primary/5 relative">
+          <h5 className="inline-block px-10 py-2 bg-emerald-900/10 rounded-full text-primary">
+            Gallery
+          </h5>
+          <Carousel />
+        </div>
+      </section>
+
       {/* Section Testimonials */}
       <section id="testimonials">
-        <div className="text-center items-center py-10 relative">
-          <h5 className="">Testimonials</h5>
-          <h1 className="text-4xl w-96 mx-auto leading-normal font-bold mb-10">
+        <div className="text-center items-center py-10 px-5 relative">
+          <h5 className="inline-block px-10 py-2 bg-emerald-900/10 rounded-full text-primary mb-12">
+            Testimonials
+          </h5>
+          <h1 className="text-3xl md:text-4xl font-bold mb-6 text-[#00452E]">
             Read What Others Have to Say
           </h1>
-          <div className="flex max-w-5xl mx-auto gap-8 flex-col md:flex">
+          <div className="max-w-5xl mx-auto gap-8 block md:flex lg:flex-row xl:flex-row">
             <div className="bg-[#f0eee8] p-8 rounded-xl">
               <img
                 class="w-24 h-24 mb-3 rounded-full mx-auto shadow-lg"

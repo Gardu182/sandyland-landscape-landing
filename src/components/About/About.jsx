@@ -1,34 +1,8 @@
-import React from "react";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { Award, CheckCircle, Calendar, Users } from "lucide-react";
 
 const About = () => {
   const elementsRef = useRef([]);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("opacity-100", "translate-y-0");
-            entry.target.classList.remove("opacity-0", "translate-y-10");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    elementsRef.current.forEach((el) => {
-      if (el) observer.observe(el);
-    });
-
-    return () => {
-      elementsRef.current.forEach((el) => {
-        if (el) observer.unobserve(el);
-      });
-    };
-  }, []);
 
   const features = [
     {
@@ -57,52 +31,47 @@ const About = () => {
     <div className="text-base">
       <div className="flex flex-col items-center lg:flex-row gap-12 lg:gap-20">
         <div className="lg:w-1/2 lg:order-1 sm:text-base lg:text-lg">
-          <div
-            ref={(el) => (elementsRef.current[0] = el)}
-            className="scroll-reveal"
-          >
-            <span className="inline-block px-10 py-2 bg-emerald-900/10 rounded-full text-primary mb-12">
-              About Us
-            </span>
+          <span className="inline-block px-10 py-2 bg-emerald-900/10 rounded-full text-primary mb-12">
+            About Us
+          </span>
 
-            <h2 className="text-2xl md:text-4xl text-center font-bold mb-6 text-[#00452E]">
-              Landscaping Experts Transforming Outdoor Spaces
-            </h2>
+          <h2 className="text-2xl md:text-4xl text-center font-bold mb-6 text-[#00452E]">
+            Landscaping Experts Transforming Outdoor Spaces
+          </h2>
 
-            <p className="text-gray-700 mb-12 leading-relaxed">
-              At Sandyland Landscape Construction Inc., we specialize in turning
-              outdoor spaces into natural works of art. Our passionate and
-              experienced team brings your vision to life through services like
-              <strong>
-                irrigation systems, grading, hardscape installations, drainage
-                solutions, welding, DG pathways, artificial turf, retaining
-                walls, chain link fencing,
-              </strong>
-              and <strong>wood & steel fences</strong>. With attention to detail
-              and high-quality materials, we deliver long-lasting outdoor
-              transformations across California.
-            </p>
+          <p className="text-[#191818] mb-12 leading-relaxed">
+            At Sandyland Landscape Construction Inc., we specialize in turning
+            outdoor spaces into natural works of art. Our passionate and
+            experienced team brings your vision to life through services like
+            <strong>
+              irrigation systems, grading, hardscape installations, drainage
+              solutions, welding, DG pathways, artificial turf, retaining walls,
+              chain link fencing,
+            </strong>
+            and <strong>wood & steel fences</strong>. With attention to detail
+            and high-quality materials, we deliver long-lasting outdoor
+            transformations across California.
+          </p>
 
-            <div className="grid md:grid-cols-2 gap-6">
-              {features.map((feature, index) => (
-                <div
-                  key={index}
-                  ref={(el) => (elementsRef.current[index + 1] = el)}
-                  className="flex items-start space-x-4 scroll-reveal"
-                  style={{ animationDelay: `${(index + 1) * 100}ms` }}
-                >
-                  <div className="p-2 rounded-full bg-emerald-900/15">
-                    {feature.icon}
-                  </div>
-                  <div>
-                    <h3 className="font-semibold text-gray-900 mb-2">
-                      {feature.title}
-                    </h3>
-                    <p className="text-gray-600">{feature.description}</p>
-                  </div>
+          <div className="grid md:grid-cols-2 gap-6">
+            {features.map((feature, index) => (
+              <div
+                key={index}
+                ref={(el) => (elementsRef.current[index + 1] = el)}
+                className="flex items-start space-x-4 scroll-reveal"
+                style={{ animationDelay: `${(index + 1) * 100}ms` }}
+              >
+                <div className="p-2 rounded-full bg-emerald-900/15">
+                  {feature.icon}
                 </div>
-              ))}
-            </div>
+                <div>
+                  <h3 className="font-semibold text-[#191818] mb-2">
+                    {feature.title}
+                  </h3>
+                  <p className="text-[#191818]">{feature.description}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 
@@ -120,7 +89,7 @@ const About = () => {
             <div className="absolute -bottom-6 -right-6 bg-white p-4 rounded-lg shadow-xl z-20">
               <div className="flex items-center space-x-2">
                 <span className="font-bold text-emerald-900">100+</span>
-                <span className="text-gray-600 font-medium leading-tight">
+                <span className="text-[#text-center] font-medium leading-tight">
                   Completed
                   <br />
                   Projects

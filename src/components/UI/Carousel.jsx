@@ -9,13 +9,13 @@ import retainwall from "../../assets/retainin_wall.jpg";
 import steelFencing from "../../assets/steel_fencing.jpeg";
 
 const slides = [
-  hardscape,
-  irrigation,
-  leveling,
-  pathway,
-  chainFencing,
-  retainwall,
-  steelFencing,
+  { image: hardscape, title: "hardscape image" },
+  { image: irrigation, title: "irrigation image" },
+  { image: leveling, title: "leveling image" },
+  { image: pathway, title: "pathway image" },
+  { image: chainFencing, title: "chainLink image" },
+  { image: retainwall, title: "retaininWall image" },
+  { image: steelFencing, title: "steelfencing image" },
 ];
 
 const Carousel = () => {
@@ -38,43 +38,36 @@ const Carousel = () => {
   }, []);
 
   return (
-    <div className="relative overflow-hidden">
+    <div className="h-[320px] md:h-[780px] max-w-[1200px] w-full m-auto py-10 px-4 relative">
       <div
-        className="flex transition-transform ease-out w-full duration-500"
-        style={{ transform: `translateX(-${current * 100}%)` }}
-      >
-        {slides.map((src, i) => (
-          <img
-            key={i}
-            src={src}
-            alt={`Slide ${i + 1}`}
-            className="w-full h-full object-cover"
-          />
-        ))}
-      </div>
+        style={{ backgroundImage: `url(${slides[current].image})` }}
+        className="w-full h-full rounded-2xl bg-center bg-cover duration-500"
+      ></div>
 
-      <div className="absolute top-0 h-full w-full justify-between items-center flex text-white px-10 text-3xl">
-        <button onClick={previousSlide}>
+      {/* left arrow */}
+      <div className="absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-[#006242] text-4xl p-2">
+        <button onClick={previousSlide} aria-label="Previous Slide">
           <i className="bi bi-arrow-left-circle-fill"></i>
         </button>
-        <button onClick={nextSlide}>
+      </div>
+      {/* left arrow */}
+      <div className="absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-[#006242] text-4xl p-2">
+        <button onClick={nextSlide} aria-label="Next Slide">
           <i className="bi bi-arrow-right-circle-fill"></i>
         </button>
       </div>
-      <div className="absolute bottom-0 py-4 flex justify-center gap-3 w-full">
-        {slides.map((s, i) => {
-          return (
-            <div
-              onClick={() => {
-                setCurrent(i);
-              }}
-              key={"circle" + i}
-              className={`rounded-full w-3 h-3 cursor-pointer ${
-                i == current ? "bg-white" : "bg-gray-500"
-              }`}
-            ></div>
-          );
-        })}
+
+      {/* Indicators */}
+      <div className="flex justify-center top-4 gap-2 py-2">
+        {slides.map((_, i) => (
+          <div
+            key={i}
+            onClick={() => setCurrent(i)}
+            className={`w-3 h-3 rounded-full cursor-pointer ${
+              current === i ? "bg-[#191818]" : "bg-[#006242]"
+            }`}
+          />
+        ))}
       </div>
     </div>
   );

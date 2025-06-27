@@ -32,10 +32,3 @@ body{
     color: white;
     font-size: 40px;
 }
-
-.testimonials-style{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
