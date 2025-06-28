@@ -124,7 +124,12 @@ const Hero = () => {
               happen together. We offer free quotes for irrigation systems,
               hardscape, fencing, and more. Get started today!
             </p>
-            <form action="send.php" method="POST" className="text-left mt-8">
+            <form
+              action="send.php"
+              method="POST"
+              className="text-left mt-8"
+              enctype="multipart/form-data"
+            >
               <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4">
                 <div>
                   <label
@@ -225,7 +230,23 @@ const Hero = () => {
                   ></textarea>
                 </div>
               </div>
-              <div class="mt-8">
+
+              <div class="sm:col-span-2">
+                <label
+                  for="file"
+                  class="block text-sm font-semibold text-gray-900 mb-2 mt-2"
+                >
+                  Attachment
+                </label>
+                <input
+                  type="file"
+                  id="file"
+                  name="file"
+                  class="block w-full rounded-md bg-white px-3.5 py-2 text-base text-gray-900 outline-1 outline-gray-300 placeholder:text-gray-400 focus:outline-2 focus:outline-indigo-600"
+                />
+              </div>
+
+              <div class="mt-5">
                 <button
                   type="submit"
                   class="block w-full md:w-auto px-9 py-3.5 rounded-md text-white text-center text-sm font-semibold bg-[#006242] hover:bg-emerald-900 focus-visible:outline-2 focus-visible:outline-offset-2"
