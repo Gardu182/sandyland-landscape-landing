@@ -29,7 +29,7 @@ const About = () => {
 
   return (
     <div className="text-base">
-      <div className="flex flex-col items-center lg:flex-row gap-12 lg:gap-20">
+      <div className="flex flex-col items-center lg:flex-row gap-12 lg:gap-20 px-5">
         <div className="lg:w-1/2 lg:order-1 sm:text-base lg:text-lg">
           <span className="inline-block px-10 py-2 bg-emerald-900/10 rounded-full text-primary mb-12">
             About Us

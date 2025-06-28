@@ -2,6 +2,7 @@ import manImage from "../../assets/man-wearing-safety-vest.png";
 import Carousel from "../UI/Carousel";
 import About from "../About/About";
 import Services from "../UI/Services";
+import Card from "../UI/Card";
 
 const Hero = () => {
   const scrollToSection4 = () => {
@@ -89,7 +90,7 @@ const Hero = () => {
       {/* Section Gallery */}
       <section id="gallery">
         <div className="text-center items-center py-20 bg-primary/5 relative">
-          <h5 className="inline-block px-10 py-2 bg-emerald-900/10 rounded-full text-primary">
+          <h5 className="inline-block px-10 py-2 bg-emerald-900/10 rounded-full text-primary lg:order-1 sm:text-base lg:text-lg">
             Gallery
           </h5>
           <Carousel />
@@ -98,66 +99,22 @@ const Hero = () => {
 
       {/* Section Testimonials */}
       <section id="testimonials">
-        <div className="text-center items-center py-10 px-5 relative">
-          <h5 className="inline-block px-10 py-2 bg-emerald-900/10 rounded-full text-primary mb-12">
+        <div className="text-center items-center py-5 px-5 relative">
+          <h5 className="inline-block px-10 py-2 bg-emerald-900/10 rounded-full text-primary mb-10 lg:order-1 sm:text-base lg:text-lg">
             Testimonials
           </h5>
           <h1 className="text-3xl md:text-4xl font-bold mb-6 text-[#00452E]">
             Read What Others Have to Say
           </h1>
-          <div className="max-w-5xl mx-auto gap-8 block md:flex lg:flex-row xl:flex-row">
-            <div className="bg-[#f0eee8] p-8 rounded-xl">
-              <img
-                class="w-24 h-24 mb-3 rounded-full mx-auto shadow-lg"
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1976&auto=format&fit=crop"
-                alt="Bonnie image"
-              />
-              <h5 class="mb-1 text-xl font-bold text-gray-900 dark:text-white">
-                Bonnie Green
-              </h5>
-              <p className="text-sm leading-7 my-3 font-light opacity-50">
-                Their knowledge of California native plants and efficient
-                irrigation systems transformed our garden into an oasis that
-                requires very little maintenance."
-              </p>
-            </div>
-            <div className="bg-[#f0eee8] p-8 rounded-xl">
-              <img
-                class="w-24 h-24 mb-3 rounded-full mx-auto shadow-lg"
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1976&auto=format&fit=crop"
-                alt="Bonnie image"
-              />
-              <h5 class="mb-1 text-xl font-bold text-gray-900 dark:text-white">
-                Bonnie Green
-              </h5>
-              <p className="text-sm leading-7 my-3 font-light opacity-50">
-                Their knowledge of California native plants and efficient
-                irrigation systems transformed our garden into an oasis that
-                requires very little maintenance."
-              </p>
-            </div>
-            <div className="bg-[#f0eee8] p-8 rounded-xl">
-              <img
-                class="w-24 h-24 mb-3 rounded-full mx-auto shadow-lg"
-                src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=1976&auto=format&fit=crop"
-                alt="Bonnie image"
-              />
-              <h5 class="mb-1 text-xl font-bold text-gray-900 dark:text-white">
-                Bonnie Green
-              </h5>
-              <p className="text-sm leading-7 my-3 font-light opacity-50">
-                Their knowledge of California native plants and efficient
-                irrigation systems transformed our garden into an oasis that
-                requires very little maintenance."
-              </p>
-            </div>
+          <div className="max-w-5xl mx-auto gap-8 block md:flex lg:flex-row xl:flex-row p-5">
+            <Card />
           </div>
         </div>
       </section>
 
       {/* Section Contacts */}
       <section id="contact">
-        <div className="flex flex-col md:flex-row mt-8 mb-8 mx-5 lg:px-8 gap-5 md:px-5 sm:text-base lg:text-lg">
+        <div className="flex flex-col md:flex-row mt-8 mb-8 mx-5 lg:px-8 gap-5 md:px-5 sm:text-base lg:text-lg p-10">
           <div class="w-full md:w-1/2 text-center px-6 md:px-10 pb-8 pt-8 rounded-xl border border-gray-100">
             <h3 class="text-3xl md:text-4xl font-semibold tracking-tight text-[#00452E]">
               Contact sales

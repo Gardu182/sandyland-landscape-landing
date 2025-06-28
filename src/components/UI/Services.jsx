@@ -70,15 +70,15 @@ const services = [
 ];
 
 const Services = () => {
-  const [expanded, setExpanded] = useState(Array(services.length).fill(false));
+  const [expanded, setExpanded] = useState(null);
 
   const toggleDetail = (index) => {
-    setExpanded((prev) => prev.map((val, i) => (i === index ? !val : val)));
+    setExpanded((prev) => (prev === index ? null : index));
   };
 
   return (
-    <div className="container mx-auto px-4 md:px-6 text-center">
-      <h2 className="inline-block px-10 py-2 bg-emerald-900/10 rounded-full text-primary mb-12">
+    <div className="container mx-auto px-5 md:px-6 text-center">
+      <h2 className="inline-block px-10 py-2 bg-emerald-900/10 rounded-full text-primary mb-12 lg:order-1 sm:text-base lg:text-lg">
         Our Services
       </h2>
       <h2 className="text-3xl md:text-4xl font-bold mb-6 text-[#00452E] scroll-reveal">
@@ -99,8 +99,8 @@ const Services = () => {
             <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
             <p className="text-[#191818] mb-2">{service.description}</p>
 
-            {/* Shows only if is expanded*/}
-            {expanded[index] && (
+            {/* Shows only if is expanded */}
+            {expanded === index && (
               <p className="text-sm text-[#191818] mb-2">{service.details}</p>
             )}
 
@@ -108,7 +108,7 @@ const Services = () => {
               onClick={() => toggleDetail(index)}
               className="flex items-center text-sm text-emerald-700 hover:underline mt-2"
             >
-              {expanded[index] ? "Show less" : "Learn more"}
+              {expanded === index ? "Show less" : "Learn more"}
             </button>
           </div>
         ))}

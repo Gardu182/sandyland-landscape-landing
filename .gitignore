@@ -25,6 +25,8 @@ dist-ssr
 .idea
 .DS_Store
 
+config.php
+
 # Project files
 *.suo
 *.ntvs*

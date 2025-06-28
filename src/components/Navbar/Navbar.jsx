@@ -25,7 +25,7 @@ const Navbar = () => {
           <img src={Logo} alt="logo site" className="w-[65px]" />
         </div>
 
-        {/*Hamburger button */}
+        {/* Hamburger button */}
         <button onClick={toggleMenu} className="md:hidden">
           <svg
             className="w-6 h-6"
