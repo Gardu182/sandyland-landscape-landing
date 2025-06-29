@@ -1,7 +1,5 @@
 <?php
 $config = require __DIR__ . '/config.php';
-//Import PHPMailer classes into the global namespace
-//These must be at the top of your script, not inside a function
 
 error_reporting(E_ALL);
 ini_set('display_errors', 1);

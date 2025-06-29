@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Logo from "../../assets/logo.svg";
+import Logo from "../../assets/SandylandLandscape.png";
 
 const navbarlinks = [
   { id: 1, title: "Home", link: "#home" },
@@ -18,8 +18,8 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-white border-b border-gray-300 w-full shadow-md">
-      <div className="flex justify-between items-center sm:px-12 sm:py-6 px-4 py-2">
+    <nav className="bg-white border-b border-gray-300 shadow-md">
+      <div className="flex justify-between items-center sm:px-12 sm:py-6 px-5 md:px-5 py-2 md:py-2">
         <div>
           {/* Logo navbar */}
           <img src={Logo} alt="logo site" className="w-[65px]" />
