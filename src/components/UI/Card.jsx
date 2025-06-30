@@ -31,7 +31,7 @@ const Testimonials = () => {
       {testimonials.map((testimonial, index) => (
         <div
           key={index}
-          className="bg-[#f0eee8] p-8 m-5 md:m-2 rounded-xl text-center"
+          className="bg-[#f0eee8] p-5 md:m-2 rounded-xl text-center"
         >
           <img
             className="w-24 h-24 mb-3 rounded-full mx-auto shadow-lg object-cover"

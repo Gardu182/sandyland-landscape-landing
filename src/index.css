@@ -31,4 +31,5 @@ body{
     line-height: 50px;
     color: white;
     font-size: 40px;
+    z-index: 999;
 }

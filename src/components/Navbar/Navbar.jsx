@@ -22,7 +22,13 @@ const Navbar = () => {
       <div className="flex justify-between items-center sm:px-12 sm:py-6 px-5 md:px-5 py-2 md:py-2">
         <div>
           {/* Logo navbar */}
-          <img src={Logo} alt="logo site" className="w-[65px]" />
+          <a href="#home">
+            <img
+              src={Logo}
+              alt="logo site"
+              className="w-[65px] cursor-pointer"
+            />
+          </a>
         </div>
 
         {/* Hamburger button */}

@@ -32,21 +32,23 @@ const Hero = () => {
             <img
               src={manImage}
               alt="Landscape contractor at work in San Diego"
-              className="h-full object-cover"
+              className="object-cover w-full md:h-full"
             />
           </div>
 
           {/* Content */}
-          <div className="md:w-1/2 text-[#FFFFFF] justify-center flex-col py-8 px-4 md:py-5 md:px-5 text-center text-content lg:py-8 lg:px-8">
+          <div className="md:w-1/2 text-[#FFFFFF] justify-center flex-col py-10 px-6 md:py-5 md:px-5 text-center lg:py-8 lg:px-8 mx-auto max-w-screen-sm">
             <div className="tracking-normal">
-              <h1 className="font-bold mb-3 md:py-3 text-xl lg:text-3xl">
-                SANDYLAND LANDSCAPE CONTRACTOR COMPANY
+              <h1 className="font-bold mb-3 md:py-3 text-lg md:text-2xl lg:text-3xl break-words">
+                SANDYLAND LANDSCAPE CONSTRUCTION INC.
               </h1>
-              <div className="flex-col">
-                <div className="mb-3 text-lg lg:text-lg">
-                  Your Dream Outdoor Space, Designed to Impress!
+              <div className="flex flex-col">
+                <div className="mb-3 text-sm lg:text-lg">
+                  <h2 className="break-words">
+                    Your Dream Outdoor Space, Designed to Impress!
+                  </h2>
                 </div>
-                <div className="text-justify font-normal text-base lg:text-lg">
+                <div className="text-justify font-normal text-base lg:text-lg break-words">
                   <p>
                     Luxury landscaping isn’t just about aesthetics—it’s about
                     creating an experience. At Sandyland Landscape Contractor
@@ -54,10 +56,12 @@ const Hero = () => {
                     your lifestyle and property value.
                   </p>
                   <div>
-                    <div className="mt-3 mb-3 text-base lg:text-lg lg:py-2 xl:mb-10">
-                      <strong>Let’s make your vision a reality.</strong> Fill
-                      out our form today and let’s create a space that reflects
-                      your success.
+                    <div className="mt-3 mb-3 text-base lg:text-lg lg:py-2 xl:mb-10 break-words">
+                      <p>
+                        <strong>Let’s make your vision a reality.</strong> Fill
+                        out our form today and let’s create a space that
+                        reflects your success.
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -65,7 +69,7 @@ const Hero = () => {
             </div>
             <button
               onClick={scrollToSection4}
-              className="mt-3 px-2 py-2 inset-ring-2 text-sm lg:text-lg rounded-lg shadow-lg hover:bg-emerald-800 transition w-2/3 md:w-auto"
+              className="mt-3 px-5 py-2 md:mb-3 inset-ring-2 text-sm lg:text-lg rounded-lg shadow-lg hover:bg-emerald-800 transition w-auto"
             >
               Start Your Transformation
             </button>
@@ -114,8 +118,8 @@ const Hero = () => {
 
       {/* Section Contacts */}
       <section id="contact">
-        <div className="flex flex-col md:flex-row mt-8 mb-8 mx-5 lg:px-8 gap-5 md:px-5 sm:text-base lg:text-lg p-10">
-          <div class="w-full md:w-1/2 text-center px-6 md:px-10 pb-8 pt-8 rounded-xl border border-gray-100">
+        <div className="flex flex-col md:flex-row mt-8 mb-8 lg:px-8 gap-3 md:px-5 p-5 sm:text-base lg:text-lg">
+          <div class="w-full md:w-1/2 text-center pb-8 pt-8 p-6 rounded-xl border border-gray-100">
             <h3 class="text-3xl md:text-4xl font-semibold tracking-tight text-[#00452E]">
               Contact sales
             </h3>
@@ -258,7 +262,7 @@ const Hero = () => {
           </div>
 
           {/* contact information */}
-          <div class="md:w-1/2 flex flex-col h-full">
+          <div class="md:w-1/2 flex flex-col h-full px-4 py-10 md:py-0">
             <div class="bg-[#f0eee8] p-8 rounded-tl-[4vw] rounded-br-[4vw] rounded-l-lg shadow-md">
               <span className="block mb-6 d-inline-flex mt-3">
                 We’re here to help with all your urban landscape design needs.
@@ -281,7 +285,9 @@ const Hero = () => {
                 </div>
                 <div>
                   <h2 class="font-semibold">Email Us</h2>
-                  <p class="text-lg/8 mb-2"> sandylandcinc@outlook.com </p>
+                  <p class="wrap-anywhere md:text-base lg:text-lg mb-2">
+                    richard.muro@sandylandlandscape.com
+                  </p>
                 </div>
               </div>
 
@@ -291,10 +297,10 @@ const Hero = () => {
                 </div>
                 <div>
                   <h2 class="font-semibold">Location</h2>
-                  <p class="text-lg/8 mb-2">
+                  <p class="lg:text-lg mb-2">
                     San Diego, California
                     <br />
-                    Service in the entire metropolitan area.
+                    Service in the entire California.
                   </p>
                 </div>
               </div>
@@ -305,7 +311,7 @@ const Hero = () => {
                 </div>
                 <div>
                   <h2 className="font-semibold">Business Hours</h2>
-                  <p className="text-lg text-black mb-3">
+                  <p className="lg:text-lg text-black mb-3">
                     Monday - Friday: 7:00 AM - 7:00 PM
                     <br />
                     Saturday: 9:00 AM - 2:00 PM
