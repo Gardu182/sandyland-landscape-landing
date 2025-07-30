@@ -1,4 +1,4 @@
-import manImage from "../../assets/man-wearing-safety-vest.png";
+import manImage from "../../assets/deck.jpg";
 import Carousel from "../UI/Carousel";
 import About from "../About/About";
 import Services from "../UI/Services";

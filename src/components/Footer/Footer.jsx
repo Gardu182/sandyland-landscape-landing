@@ -5,12 +5,6 @@ const footerSocial = [
     link: "https://www.facebook.com/profile.php?id=61568125952923",
     icon: "bi bi-facebook",
   },
-  {
-    id: 2,
-    title: "Instagram",
-    link: "https://www.instagram.com",
-    icon: "bi bi-instagram",
-  },
 ];
 
 const Footer = () => {

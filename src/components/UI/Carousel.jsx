@@ -1,12 +1,16 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
 import hardscape from "../../assets/hardscape.jpg";
-import irrigation from "../../assets/irrigation.jpg";
-import leveling from "../../assets/leveling.jpg";
+import irrigation from "../../assets/irrigation.png";
+import leveling from "../../assets/chain_linkTwo.png";
 import pathway from "../../assets/pathway.jpg";
 import chainFencing from "../../assets/chain_link_fencing.jpg";
 import retainwall from "../../assets/retainin_wall.jpg";
 import steelFencing from "../../assets/steel_fencing.jpeg";
+import pathwayTwo from "../../assets/pathwayTwo.png";
+import artificialTurf from "../../assets/artificial_turf.jpeg";
+import plantInstallation from "../../assets/plantInstallation.png";
+import mensWorking from "../../assets/mensWorking.jpg";
 
 const slides = [
   { image: hardscape, title: "hardscape image" },
@@ -16,6 +20,10 @@ const slides = [
   { image: chainFencing, title: "chainLink image" },
   { image: retainwall, title: "retaininWall image" },
   { image: steelFencing, title: "steelfencing image" },
+  { image: pathwayTwo, title: "pathwayTwo image" },
+  { image: artificialTurf, title: "artificialTurf image" },
+  { image: plantInstallation, title: "plantInstallation image" },
+  { image: mensWorking, title: "mensWorking image" },
 ];
 
 const Carousel = () => {
